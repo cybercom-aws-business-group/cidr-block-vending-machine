@@ -1,0 +1,9 @@
+-e .
+aws-cdk.core
+aws-cdk.aws_iam
+aws-cdk.aws_ec2
+aws-cdk.aws_cloudformation
+aws-cdk.aws_lambda
+aws-cdk.aws_apigateway
+aws-cdk.aws-dynamodb
+aws-cdk.aws-lambda-python
