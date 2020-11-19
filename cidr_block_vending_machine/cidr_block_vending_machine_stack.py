@@ -68,8 +68,8 @@ class CidrBlockVendingMachineStack(core.Stack):
 
         rest_api_role = aws_iam.Role(self,'RestAPIRole',
             assumed_by=aws_iam.ServicePrincipal('apigateway.amazonaws.com'),
-            managed_policies=[aws_iam.ManagedPolicy.from_aws_managed_policy_name('AmazonDynamoDBFullAccess')]
         )
+        allocation_table.grant_read_write_data(rest_api_role)
         
         patch_request_string = """
             {{
